@@ -120,7 +120,11 @@
     <ciManagement></ciManagement>
     <issueManagement></issueManagement>
     <distributionManagement></distributionManagement>
-    <scm>scm:git:http://github.com/vdubois/JEE5PoC.git</scm>
+    <scm>
+		<connection>scm:git:http://github.com/vdubois/JEE5PoC.git</connection>
+		<developerConnection>scm:git:https://github.com/vdubois/JEE5PoC.git</developerConnection>
+		<url>https://github.com/vdubois/JEE5PoC</url>
+	</scm>
 
     <licenses></licenses>
     <mailingLists></mailingLists>
