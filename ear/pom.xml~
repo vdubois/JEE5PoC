@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>JEE5PoC-ear</artifactId>
+    <packaging>ear</packaging>
+    <name>JEE5PoC-ear</name>
+
+    <parent>
+        <groupId>com.tuxstudio.poc.jee5</groupId>
+        <artifactId>JEE5PoC</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.glassfish.maven.plugin</groupId>
+                <artifactId>maven-glassfish-plugin</artifactId>
+                <configuration>
+                    <components>
+                        <component>
+                            <name>JEE5PoC-ear</name>
+                            <artifact>${project.build.directory}/JEE5PoC-ear-1.0.0-SNAPSHOT.ear</artifact>
+                        </component>
+                    </components>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tuxstudio.poc.jee5</groupId>
+            <artifactId>JEE5PoC-ejb</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.tuxstudio.poc.jee5</groupId>
+            <artifactId>JEE5PoC-war</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+</project>
