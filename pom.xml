@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tuxstudio.poc.jee5</groupId>
     <artifactId>JEE5PoC</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>JEE5PoC</name>
 
@@ -102,8 +102,8 @@
 
     <!-- Meta information -->
 
-    <description></description>
-    <url></url>
+    <description />
+    <url />
 
     <developers>
         <developer>
@@ -112,13 +112,13 @@
             <roles>
                 <role>Lead Developer</role>
             </roles>
-            <url></url>
+            <url />
         </developer>
     </developers>
-    <contributors></contributors>
+    <contributors />
 
-    <ciManagement></ciManagement>
-    <issueManagement></issueManagement>
+    <ciManagement />
+    <issueManagement />
     <distributionManagement>
 		<repository>
 			<id>nexus</id>
@@ -137,8 +137,8 @@
 		<url>https://github.com/vdubois/JEE5PoC</url>
 	</scm>
 
-    <licenses></licenses>
-    <mailingLists></mailingLists>
-    <organization></organization>
+    <licenses />
+    <mailingLists />
+    <organization />
 
 </project>
