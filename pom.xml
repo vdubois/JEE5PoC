@@ -120,7 +120,7 @@
     <ciManagement></ciManagement>
     <issueManagement></issueManagement>
     <distributionManagement></distributionManagement>
-    <scm>scm:git:http://github.com/vdubois</scm>
+    <scm>scm:git:http://github.com/vdubois/JEE5PoC.git</scm>
 
     <licenses></licenses>
     <mailingLists></mailingLists>
