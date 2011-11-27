@@ -17,7 +17,12 @@
 
 //package com.tuxstudio.poc.jee5;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -26,8 +31,17 @@ import javax.ejb.Stateless;
 @Stateless
 public class HelloBean implements HelloLocal
 {
+	@PersistenceContext(unitName="JPAPersistenceUnit")
+	private EntityManager entityManager;
+
     @Override
     public String sayHello() {
         return "Hello, your name is";
     }
+
+	@SuppressWarnings("unchecked")
+	public List<Adresse> listAdresses() {
+		return entityManager.createQuery("select a from Adresse a")
+				.getResultList();
+	}
 }

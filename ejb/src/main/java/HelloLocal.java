@@ -17,6 +17,8 @@
 
 //package com.tuxstudio.poc.jee5;
 
+import java.util.List;
+
 import javax.ejb.Local;
 
 /**
@@ -27,4 +29,6 @@ import javax.ejb.Local;
 public interface HelloLocal
 {
     String sayHello();
+
+	List<Adresse> listAdresses();
 }

@@ -24,11 +24,18 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
+import javax.ejb.EJB;
+
+import java.util.List;
+
+/**helloComponent
  *
  * @author Piotr Soróbka <psorobka@gmail.com>
  */
 public class HelloBeanTest {
+
+	@EJB
+	HelloLocal helloComponent;
 
     public HelloBeanTest() {
     }
@@ -54,7 +61,11 @@ public class HelloBeanTest {
      */
     @Test
     public void testSayHello_String() {
-        HelloBean b = new HelloBean();
-        assertTrue(b.sayHello().equals("Hello, your name is"));
+        assertTrue(helloComponent.sayHello().equals("Hello, your name is"));
     }
+
+	@Test
+	public void shouldSaveTaskAndResetTaskInstanceOnBean() {
+		List<Adresse> adresses = helloComponent.listAdresses();
+	}
 }
