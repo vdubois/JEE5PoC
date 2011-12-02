@@ -9,7 +9,7 @@ import javax.persistence.PersistenceContext;
 import com.tuxstudio.poc.jee5.ejb.entity.User;
 
 /**
- * EJB Stateless pour l'accès aux utilisateurs
+ * EJB Stateless pour l'acces aux utilisateurs
  * @author Vincent Dubois <dubois.vct@free.fr>
  */
 @Stateless
@@ -36,7 +36,7 @@ public class UserBean implements UserLocal
 		
 		@Override
 		public void delete(User user) {
-				user = entityManager.merge(user); // utile uniquement si l'entity manager est géré par le développeur, non par le conteneur
+				user = entityManager.merge(user); // utile uniquement si l'entity manager est gere par le developpeur, non par le conteneur
 				entityManager.remove(user);
 		}
 		

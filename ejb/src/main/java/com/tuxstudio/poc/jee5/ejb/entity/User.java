@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 
 /**
- * Entité User
+ * Entite User
  * @author Vincent Dubois <dubois.vct@free.fr> 
  */
 @Entity
