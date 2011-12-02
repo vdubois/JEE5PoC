@@ -8,20 +8,20 @@
     <parent>
         <groupId>com.tuxstudio.poc.jee5</groupId>
         <artifactId>JEE5PoC</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3-SNAPSHOT</version>
     </parent>
 
     <dependencies>
         <dependency>
             <groupId>com.tuxstudio.poc.jee5</groupId>
             <artifactId>JEE5PoC-ejb</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3-SNAPSHOT</version>
             <type>ejb</type>
         </dependency>
         <dependency>
             <groupId>com.tuxstudio.poc.jee5</groupId>
             <artifactId>JEE5PoC-war</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3-SNAPSHOT</version>
             <type>war</type>
         </dependency>
     </dependencies>
