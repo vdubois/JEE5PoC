@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
     <managed-bean>
+        <managed-bean-name>userController</managed-bean-name>
+        <managed-bean-class>com.tuxstudio.poc.jee5.controller.UserController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+	
+    <managed-bean>
         <managed-bean-name>HelloController</managed-bean-name>
         <managed-bean-class>HelloController</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
-	
+
+    <navigation-rule>
+        <from-view-id>/index.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/user-index.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/user-index.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>add</from-outcome>
+            <to-view-id>/user-create.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/user-create.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>create</from-outcome>
+            <to-view-id>/user-index.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/user-index.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>delete</from-outcome>
+            <to-view-id>/user-index.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
     <navigation-rule>
         <from-view-id>/index.jsp</from-view-id>
         <navigation-case>
@@ -13,6 +51,24 @@
             <to-view-id>/hello.jsp</to-view-id>
         </navigation-case>
     </navigation-rule>
+
+		<navigation-rule>
+				<from-view-id>/user-index.jsp</from-view-id>
+				<navigation-case>
+						<from-outcome>edit</from-outcome>
+						<to-view-id>/user-edit.jsp</to-view-id>
+						<redirect />
+				</navigation-case>
+		</navigation-rule>
+
+		<navigation-rule>
+				<from-view-id>/user-edit.jsp</from-view-id>
+				<navigation-case>
+						<from-outcome>index</from-outcome>
+						<to-view-id>/user-index.jsp</to-view-id>
+						<redirect />
+				</navigation-case>
+		</navigation-rule>
 
     <navigation-rule>
         <from-view-id>/hello.jsp</from-view-id>
@@ -25,7 +81,7 @@
     <application>
         <locale-config>
             <default-locale>en</default-locale>
-            <supported-locale>pl</supported-locale>
+            <supported-locale>fr</supported-locale>
         </locale-config>
         <resource-bundle>
             <base-name>messages</base-name>

@@ -25,4 +25,22 @@
             <type>war</type>
         </dependency>
     </dependencies>
+    
+  	<build>
+    	<plugins>
+      		<plugin>
+        		<groupId>org.codehaus.mojo</groupId>
+        		<artifactId>jboss-maven-plugin</artifactId>
+        		<version>1.5.0</version>
+        		<configuration>
+          			<hostName>localhost</hostName>
+          			<port>8080</port>
+          			<fileNames>
+            			<fileName>${project.build.directory}/${project.artifactId}-${project.version}.ear</fileName>
+          			</fileNames>
+        		</configuration>
+      		</plugin>
+    	</plugins>
+  	</build>
+    
 </project>

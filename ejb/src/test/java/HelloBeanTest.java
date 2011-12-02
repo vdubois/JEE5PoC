@@ -34,8 +34,7 @@ import java.util.List;
  */
 public class HelloBeanTest {
 
-	@EJB
-	HelloLocal helloComponent;
+	HelloBean helloComponent;
 
     public HelloBeanTest() {
     }
@@ -61,11 +60,7 @@ public class HelloBeanTest {
      */
     @Test
     public void testSayHello_String() {
+        helloComponent = new HelloBean();
         assertTrue(helloComponent.sayHello().equals("Hello, your name is"));
     }
-
-	@Test
-	public void shouldSaveTaskAndResetTaskInstanceOnBean() {
-		List<Adresse> adresses = helloComponent.listAdresses();
-	}
 }

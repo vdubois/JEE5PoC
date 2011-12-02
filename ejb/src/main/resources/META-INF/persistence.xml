@@ -6,7 +6,7 @@
 	<persistence-unit  name="JPAPersistenceUnit">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:/jpaDS</jta-data-source>
-		<class>Adresse</class>
+		<class>com.tuxstudio.poc.jee5.ejb.entity.User</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<property name="hibernate.show_sql" value="true" />
@@ -16,4 +16,3 @@
 		</properties>
 	</persistence-unit>
 </persistence>
-

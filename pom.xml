@@ -12,7 +12,7 @@
         <module>war</module>
         <module>ear</module>
     </modules>
-
+		
     <build>
         <pluginManagement>
             <plugins>
@@ -43,18 +43,8 @@
                         </archive>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>jboss-maven-plugin</artifactId>
-                    <version>1.5.0</version>
-                    <configuration>
-                      <jbossHome>/home/vincent/developpement/jboss-5.0.0.GA</jbossHome>
-                      <serverName>all</serverName>
-                      <fileName>ear/target/JEE5PoC-ear-1.0.0-SNAPSHOT.ear</fileName>
-                    </configuration>
-                </plugin>
             </plugins>
-        </pluginManagement>
+        </pluginManagement>        
     </build>
 
     <dependencyManagement>
