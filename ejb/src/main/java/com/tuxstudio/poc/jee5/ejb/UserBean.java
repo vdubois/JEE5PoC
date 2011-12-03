@@ -19,30 +19,29 @@ public class UserBean implements UserLocal
 		private EntityManager entityManager;
 
 		@Override
-		public boolean create(User userToCreate) {
-				entityManager.persist(userToCreate);
-				return true;
+		public void create(User userToCreate) {
+			entityManager.persist(userToCreate);
 		}
 
 		@Override
 		public User read(Long userId) {
-				return entityManager.find(User.class, userId);
+			return entityManager.find(User.class, userId);
 		}
 		
 		@Override
 		public void update(User user) {
-				user = entityManager.merge(user);
+			entityManager.merge(user);
 		}
 		
 		@Override
 		public void delete(User user) {
-				user = entityManager.merge(user); // utile uniquement si l'entity manager est gere par le developpeur, non par le conteneur
-				entityManager.remove(user);
+			User userToDelete = entityManager.merge(user); // utile uniquement si l'entity manager est gere par le developpeur, non par le conteneur
+			entityManager.remove(userToDelete);
 		}
 		
 		@SuppressWarnings("unchecked")
-    @Override
+        @Override
 		public List<User> list() {
-				return entityManager.createQuery("select u from User u").getResultList();
+			return entityManager.createQuery("select u from User u").getResultList();
 		}
 }

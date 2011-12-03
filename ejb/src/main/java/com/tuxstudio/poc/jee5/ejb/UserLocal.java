@@ -13,13 +13,35 @@ import com.tuxstudio.poc.jee5.ejb.entity.User;
 @Local
 public interface UserLocal
 {
-    boolean create(User userToCreate);
+    /**
+     * Methode de creation d'un utilisateur
+     * @param userToCreate l'utilisateur a creer
+     */
+    void create(User userToCreate);
 
-		User read(Long userId);
-		
-		void update(User user);
-		
-		void delete(User user);
-		
-		List<User> list();
+    /**
+     * Methode de lecture d'un utilisateur
+     * @param userId l'identifiant de l'utilisateur a lire
+     * @return l'utilisateur lu
+     */
+	User read(Long userId);
+	
+	/**
+	 * Methode de mise a jour d'un utilisateur
+	 * @param user l'utilisateur a mettre a jour
+	 */
+	void update(User user);
+
+    /**
+     * Methode de suppression d'un utilisateur
+     * @param user l'utilisateur a supprimer
+     */		
+	void delete(User user);
+
+    /**
+     * Methode de lecture de l'ensemble des utilisateurs
+     * @return la liste des utilisateurs
+     */		
+	List<User> list();
 }
+
